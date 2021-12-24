@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script >
+	window.addEventListener("load",init);
+	function init(){
+		document.getElementById("button").addEventListener("click",roll);
+	}
+	function roll(){
+		document.getElementById("die1").setAttribute("src","die"+ran()+".png");
+		document.getElementById("die2").setAttribute("src","die"+ran()+".png");
+		document.getElementById("die3").setAttribute("src","die"+ran()+".png");
+		document.getElementById("die4").setAttribute("src","die"+ran()+".png");
+	}
+	function ran(){
+		return Math.floor(1+Math.random()*6)
+	}
+</script>
+<body>
+<input id="button" type="button" value="roll" onclick="roll()">
+<img id="die1" src="die1.png">
+<img id="die2" src="die1.png">
+<img id="die3" src="die1.png">
+<img id="die4" src="die1.png">
+</body>
+</html>
